@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package test;
+
+import "google/protobuf/any.proto";
+
+message Person {
+    string first_name = 1;
+    string last_name = 2;
+    int32 age = 3;
+}
+
+message PersonAny {
+    repeated google.protobuf.Any persons = 1;
+}
+
+message PersonArray {
+    repeated Person persons = 1;
+}
